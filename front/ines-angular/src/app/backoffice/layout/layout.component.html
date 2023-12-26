@@ -1,0 +1,94 @@
+<app-nava-bar-component></app-nava-bar-component>
+
+<div class="row" *ngIf="myData=='ar'">
+    <div class="col-md-9" style="margin-top: 100px; margin-left: 50px;">
+        <router-outlet></router-outlet>
+    </div>
+    <div class="col-md-3" >
+        <div *ngIf="user?.role == 'SIMPLE_USER'">
+            <app-side-bar-etudiant></app-side-bar-etudiant>
+        </div>
+        <div *ngIf="user?.role == 'ADMIN'">
+            <app-side-bar-component></app-side-bar-component>
+        </div>
+      
+
+    </div>
+
+</div>
+
+<div class="row" *ngIf="myData=='en'">
+    <div class="col-md-3">
+        <div *ngIf="user?.role == 'SIMPLE_USER'">
+            <app-side-bar-etudiant></app-side-bar-etudiant>
+        </div>
+        <div *ngIf="user?.role == 'ADMIN'">
+            <app-side-bar-component></app-side-bar-component>
+        </div>
+    </div>
+    <div class="col-md-8" style="margin-top: 100px;">
+        <router-outlet></router-outlet>
+        <footer class="footer" style="margin-top: 50px;">
+            <div class="container">
+             <div class="row">
+               <div class="footer-col">
+                 <h4>company</h4>
+                 <ul>
+                   <li><a href="#">Contact</a></li>
+                   <li><a href="#">A propos de concours</a></li>
+                   <li><a href="#">Liens Rapides</a></li>
+                   <li><a href="#">affiliate program</a></li>
+                 </ul>
+               </div>
+               <div class="footer-col">
+                 <h4>get help</h4>
+                 <ul>
+                   <li><a href="#">Adresse
+                    Centre nationnal d'informatique</a></li>
+                   <li><a href="#">concours@gmail.com</a></li>
+                   <li><a href="#"> +216 70 526 385</a></li>
+                   <li><a href="#"> +216 70 526 388</a></li>
+                   <li><a href="#"> +216 70 526 777</a></li>
+                 </ul>
+               </div>
+               <div class="footer-col">
+                 <h4>online concours</h4>
+                 <ul>
+                   <li><a href="#">Accueil</a></li>
+                   <li><a href="#">Présentation</a></li>
+                   <li><a href="#">Partenariat</a></li>
+                   <li><a href="#">Enseignants</a></li>
+                   
+
+
+
+
+                 </ul>
+               </div>
+               <div class="footer-col">
+                 <h4>follow us</h4>
+                 <div class="social-links" style="display: flex; ">
+                  <div>
+                    <img style="width: 60px;" src="assets/img/icons/facebook.png" alt="">
+
+                  </div>
+                  <div style="margin-top: 10px;">
+                    <img style="width: 40px;" src="assets/img/icons/linked.png" alt="">
+
+                  </div>
+                  <div style="margin-top: 10px;">
+                    <img style="width: 40px;" src="assets/img/icons/twitter.png" alt="">
+
+                  </div>
+                 </div>
+               </div>
+             </div>
+            </div>
+         </footer>
+    </div>
+    
+
+</div>
+
+
+

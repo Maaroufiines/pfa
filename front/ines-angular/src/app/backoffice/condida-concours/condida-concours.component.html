@@ -1,0 +1,48 @@
+<h3>Liste des concours</h3>
+<div class="row">
+    <div *ngFor="let c of concours ; let i = index" class="col-md-5">
+        <div class="card " style="width: 18rem; margin: 5px;" *ngIf="c.hide !== 'yes'">
+            <img src="assets/img/conccour/{{i+1}}.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{c.name}}</h5>
+                <div>Date : <span>{{c.dateConcours}}</span></div>
+                <div>Date examen : <span>{{c.dateExam}}</span></div>
+                <p>{{c.certif}}</p>
+                <p class="card-text" style="height: 100px;">{{c.description}}</p>
+                <button (click)="add(c)"  class="btn btn-primary">Participer</button>
+            </div>
+        </div>
+    </div>
+ 
+  
+</div>
+
+<p-dialog header="Score" [(visible)]="visible" [style]="{width: '50vw'}">
+    <form >
+        <div class="row">
+            <div class="col-12">
+                <label style="font-weight: bold;" for="">Moyenne Bac</label>
+                <input class="form-control" type="text" name="bac" [(ngModel)]="bac" placeholder="Moyenne Bac">
+            </div>
+            <div class="col-12">
+                <label style="font-weight: bold;" for="">Moyenne 1 ere fac</label>
+                <input class="form-control" type="text" name="prefac" [(ngModel)]="prefac" placeholder="Moyenne premièr fac">
+            </div>
+            <div class="col-12">
+                <label style="font-weight: bold;" for="">Moyenne 2 éme fac</label>
+                <input class="form-control" type="text" name="deufac" [(ngModel)]="deufac" placeholder="Moyenne 2eme fac">
+            </div>
+            <div class="col-12">
+                <label style="font-weight: bold;" for="">Note pfe</label>
+                <input class="form-control" type="text" name="pfe" [(ngModel)]="pfe" placeholder="Note pfe licence">
+            </div>
+            <div class="col-12">
+                <label style="font-weight: bold;" for="">Note pfe d'ingérieurie</label>
+                <input class="form-control" type="text" name="ing" [(ngModel)]="ing" placeholder="Note pfe ingénieurie">
+            </div>
+            <div class="col-12" style="margin-top: 15px;">
+                <button class="btn btn-primary" (click)="save()">Enregistrer</button>
+            </div>
+        </div>
+    </form>
+</p-dialog>

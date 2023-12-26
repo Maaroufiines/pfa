@@ -1,0 +1,85 @@
+<!-- ======= Sidebar ======= -->
+<aside id="sidebar" [ngClass]="{'sidebar-arab' :myData=='ar' , 'sidebar-english' :myData=='en'}"  >
+
+  <ul class="sidebar-nav" id="sidebar-nav">
+
+
+    <li class="nav-item" [ngClass]="{'nav-link-arab' :myData=='ar' , 'nav-link-en' :myData=='en'}" >
+      <a class="arab"   style="font-weight: bold; color: rgb(36, 88, 186); font-family: Arial, Helvetica, sans-serif;">
+        {{"sidebar.title.t1" | translate}}
+      </a>
+      <ul class="sidebar-nav" id="sidebar-nav">
+        <li class="nav-item">
+          <a class="nav-link " (click)="goToProfil()" [ngClass]="{'nav-link-arab' :myData=='ar' , 'nav-link-en' :myData=='en'}">
+            <i class="bi bi-grid"></i>
+            <span>{{"sidebar.item.i1" | translate}}</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="concours" [ngClass]="{'nav-link-arab' :myData=='ar' , 'nav-link-en' :myData=='en'}">
+            <i class="bi bi-grid"></i>
+            <span>{{"sidebar.item.i2" | translate}}</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="liste/participant" [ngClass]="{'nav-link-arab' :myData=='ar' , 'nav-link-en' :myData=='en'}">
+            <i class="bi bi-grid"></i>
+            <span>{{"sidebar.item.i3" | translate}}</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " [ngClass]="{'nav-link-arab' :myData=='ar' , 'nav-link-en' :myData=='en'}">
+            <i class="bi bi-grid"></i>
+            <span>{{"sidebar.item.i4" | translate}}</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " [ngClass]="{'nav-link-arab' :myData=='ar' , 'nav-link-en' :myData=='en'}">
+            <i class="bi bi-grid"></i>
+            <span>{{"sidebar.item.i5" | translate}}</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " [ngClass]="{'nav-link-arab' :myData=='ar' , 'nav-link-en' :myData=='en'}">
+            <i class="bi bi-grid"></i>
+            <span>{{"sidebar.item.i6" | translate}}</span>
+          </a>
+        </li>
+        <li class="nav-item" [ngClass]="{'nav-link-arab' :myData=='ar' , 'nav-link-en' :myData=='en'}">
+          <a class="nav-link " >
+            <i class="bi bi-grid"></i>
+            <span>{{"sidebar.item.i7" | translate}}</span>
+          </a>
+        </li>
+      </ul>
+    </li>
+
+    <li class="nav-item" >
+      <a class="arab" [ngClass]="{'nav-link-arab' :myData=='ar' , 'nav-link-en' :myData=='en'}" style="font-weight: bold; color: rgb(36, 88, 186);">
+        {{"sidebar.title.t2" | translate}}
+      </a>
+      <ul class="sidebar-nav" id="sidebar-nav">
+        <li class="nav-item">
+          <a class="nav-link " [ngClass]="{'nav-link-arab' :myData=='ar' , 'nav-link-en' :myData=='en'}">
+            <i class="bi bi-grid"></i>
+            <span>{{"sidebar.item.i8" | translate}}</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [ngClass]="{'nav-link-arab' :myData=='ar' , 'nav-link-en' :myData=='en'}">
+            <i class="bi bi-grid"></i>
+            <span>{{"sidebar.item.i9" | translate}}</span>
+          </a>
+        </li>
+
+    
+      </ul>
+    </li>
+
+
+
+
+
+  </ul>
+
+</aside><!-- End Sidebar-->

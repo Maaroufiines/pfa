@@ -1,0 +1,90 @@
+
+{ 
+    "welcome": {
+        "w1" : "Log in to your account"
+    },
+
+    "navbar" : {
+        "search" : "Search",
+        "signout" : "Sign out"
+    },
+    "sidebar" : {
+        "item": {
+            "i1": "Personal account",
+            "i2": "Add Concours",
+            "i3": "List of Concours",
+            "i4": "List of candidates",
+            "i5": "Enterprise data",
+            "i6": "Successful candidates",
+            "i7": "Questions",
+            "i8": "Most popular ages",
+            "i9": "Most Popular Races"
+        },
+        "title": {
+            "t1": "Admin space",
+            "t2": "Stats"
+        }
+    },
+    "sidebarEtu" : {
+        "item" : {
+            "i1": "Personal account",
+            "i2": "Concours",
+            "i3": "Home"
+        },
+        "title" : {
+            "t1": "Client space"
+        }
+     
+    },
+    "login" : {
+        "l1" : "Log in to your account",
+        "l2" : "CIN",
+        "l3" : "Cin is required",
+        "l4" :"Password",
+        "l5" :"Password is required",
+        "l6" :"Forgot Password?",
+        "l7" :"Log in",
+        "l8" :"Need an account?",
+        "l9" :"Create an account"
+    },
+    "register" : {
+        "r1" : "REGISTER",
+        "l2" : "CIN",
+        "l3" : "Cin is required",
+        "r2" : "First name",
+        "r3" : "Last Name",
+        "r4" : "Birth Day",
+        "r5" : "Phone",
+        "r6" : "Address",
+        "r7" : "Email",
+        "r8" : "Password",
+        "r9" : "REGISTER NOW",
+        "r10" : "Enter your information to register"
+    },
+    "profile":{
+        "p1" : "First name",
+        "p2" : "Last Name",
+        "p3" : "Email",
+        "p4" : "Old Password",
+        "p5" : "New Password",
+        "p6" : "Adresse",
+        "p7" : "Update"
+    },
+    "concours" : {
+        "c1" : "Job name",
+        "c2" : "Scientific certificate",
+        "c3" : "Baccalaureate",
+        "c4" : "vacation certificate",
+        "c5" : "Ph.D",
+        "c6" : "Master's degree",
+        "c7" : "Date of passing the corresponding exam",
+        "c8" : "The final date of the Concours",
+        "c9" : "Final results date",
+        "c10": "Upload a photo for the Concours",
+        "c11": "Details of the Concours",
+        "c12": "Result calculation formula",
+        "c13": "Add the corresponding",
+        "c14": "Reset"
+    }
+    
+}

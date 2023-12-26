@@ -1,0 +1,28 @@
+<!-- ======= Sidebar ======= -->
+<aside id="sidebar" [ngClass]="{'sidebar-arab' :myData=='ar' , 'sidebar-english' :myData=='en'}"  >
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+  
+  
+      <li class="nav-item" [ngClass]="{'nav-link-arab' :myData=='ar' , 'nav-link-en' :myData=='en'}" >
+        <a class="arab" (click)="goToProfil()" style="font-weight: bold; color: rgb(36, 88, 186); font-family: Arial, Helvetica, sans-serif;">
+          {{"sidebarEtu.title.t1" | translate}}
+        </a>
+        <ul class="sidebar-nav" id="sidebar-nav">
+          <li class="nav-item">
+            <a class="nav-link " href="profile" [ngClass]="{'nav-link-arab' :myData=='ar' , 'nav-link-en' :myData=='en'}">
+              <i class="bi bi-grid"></i>
+              <span>{{"sidebarEtu.item.i1" | translate}}</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="condidat/concours" [ngClass]="{'nav-link-arab' :myData=='ar' , 'nav-link-en' :myData=='en'}">
+              <i class="bi bi-grid"></i>
+              <span>{{"sidebarEtu.item.i2" | translate}}</span>
+            </a>
+          </li>
+     
+        </ul>
+      </li>
+    </ul>
+  </aside>

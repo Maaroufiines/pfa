@@ -1,0 +1,159 @@
+<section class="flex flex-col md:flex-row h-screen items-center">
+
+    <div class="bg-indigo-600 hidden lg:block w-full md:w-1/2 xl:w-2/3 h-screen">
+        <img src="assets/img/login-img.png" style="width: 650px; margin-left: auto; margin-right: auto; height: 600px;"
+            alt="" class="w-full h-full object-cover">
+    </div>
+
+    <div class="bg-white w-full md:max-w-md lg:max-w-full  md:w-1/2 xl:w-1/3 h-screen px-6 lg:px-16 xl:px-12
+          flex items-center justify-center">
+
+        <div class="w-full h-100">
+            <div style="margin-top: 20px; width: 120px;">
+                <select class="form-control" (change)="translateLanguageTo($event)">
+
+                    <option value="en" [selected]="lang == 'en' ">English </option>
+                    <option value="ar" [selected]="lang == 'ar' "><i class="cif-fr"></i> عربي </option>
+
+                </select>
+            </div>
+
+            <div class="md:flex w-full">
+
+                <div class="md-2">
+                    <div class="text-center mb-10">
+                        <h1 class="font-bold text-3xl text-gray-900">{{"register.r1" | translate}}</h1>
+                        <p>{{"register.r10" | translate}}</p>
+
+                    </div>
+
+                    <div>
+                        <div class="flex -mx-12">
+                            <div class="w-full px-3 mb-12">
+                                <label for="" class="block text-gray-700" [ngClass]="{'arabe' : myData == 'ar'}" >{{"register.l2" | translate}}</label>
+                                <div class="flex">
+                                    <div
+                                        class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center">
+                                        <i class="mdi mdi-lock-outline text-gray-400 text-lg"></i></div>
+                                    <input type="text"
+                                        class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500"
+                                         name="cin" 
+                                        [(ngModel)]="user.cin">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex -mx-12">
+                            <div class="w-1/2 px-3 mb-3">
+                                <label for="" class="block text-gray-700" [ngClass]="{'arabe' : myData == 'ar'}">{{"register.r2" | translate}}</label>
+                                <div class="flex">
+                                    <div
+                                        class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center">
+                                        <i class="mdi mdi-account-outline text-gray-400 text-lg"></i></div>
+                                    <input type="text"
+                                        class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500"
+                                        name="firstname" #firstname="ngModel" [(ngModel)]="user.firstName">
+                                </div>
+                            </div>
+                            <div class="w-1/2 px-3 mb-3">
+                                <label for="" class="block text-gray-700" [ngClass]="{'arabe' : myData == 'ar'}">{{"register.r3" | translate}}</label>
+                                <div class="flex">
+                                    <div
+                                        class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center">
+                                        <i class="mdi mdi-account-outline text-gray-400 text-lg"></i></div>
+                                    <input type="text"
+                                        class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500"
+                                        name="lastname" #lastname="ngModel" [(ngModel)]="user.lastName">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex -mx-12">
+                            <div class="w-1/2 px-3 mb-3">
+                                <label for="" class="block text-gray-700" [ngClass]="{'arabe' : myData == 'ar'}">{{"register.r4" | translate}}</label>
+                                <div class="flex">
+                                    <div
+                                        class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center">
+                                        <i class="mdi mdi-account-outline text-gray-400 text-lg"></i></div>
+                                    <input type="date"
+                                        class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500"
+                                        name="birthdate" #birthdate="ngModel" [(ngModel)]="user.dayOfBirth">
+                                </div>
+                            </div>
+                            <div class="w-1/2 px-3 mb-3">
+                                <label for="" class="block text-gray-700" [ngClass]="{'arabe' : myData == 'ar'}">{{"register.r5" | translate}}</label>
+                                <div class="flex">
+                                    <div
+                                        class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center">
+                                        <i class="mdi mdi-account-outline text-gray-400 text-lg"></i></div>
+                                    <input type="text"
+                                        class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500"
+                                        name="telephone" #telephone="ngModel" [(ngModel)]="user.telNum">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex -mx-12">
+                            <div class="w-full px-3 mb-3">
+                                <label for="" class="block text-gray-700" [ngClass]="{'arabe' : myData == 'ar'}">{{"register.r6" | translate}} </label>
+                                <div class="flex">
+                                    <div
+                                        class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center">
+                                        <i class="mdi mdi-email-outline text-gray-400 text-lg"></i></div>
+                                    <input type="text"
+                                        class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500"
+                                        name="adress" #adress="ngModel" [(ngModel)]="user.address">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex -mx-12">
+                            <div class="w-full px-3 mb-3">
+                                <label for="" class="block text-gray-700" [ngClass]="{'arabe' : myData == 'ar'}">{{"register.r7" | translate}}</label>
+                                <div class="flex">
+                                    <div
+                                        class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center">
+                                        <i class="mdi mdi-email-outline text-gray-400 text-lg"></i></div>
+                                    <input type="email"
+                                        class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500"
+                                        placeholder="email@example.com" name="email" #email="ngModel"
+                                        [(ngModel)]="user.email">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex -mx-12">
+                            <div class="w-full px-3 mb-12">
+                                <label for="" class="block text-gray-700" [ngClass]="{'arabe' : myData == 'ar'}">{{"register.r8" | translate}}</label>
+                                <div class="flex">
+                                    <div
+                                        class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center">
+                                        <i class="mdi mdi-lock-outline text-gray-400 text-lg"></i></div>
+                                    <input type="password"
+                                        class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500"
+                                        placeholder="************" name="password" #password="ngModel"
+                                        [(ngModel)]="user.password">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex -mx-12">
+                            <div class="w-full px-3 mb-3">
+                                <button
+                                    class="block w-full max-w-xs mx-auto bg-indigo-500 hover:bg-indigo-700 focus:bg-indigo-700 text-white rounded-lg px-3 py-3 font-semibold"
+                                    (click)="signUp()">{{"register.r9" | translate}}</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="absolute bottom-0 right-2 cursor-pointer" routerLink="/login">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path
+                                d="M15.41 16.58L10.83 12l4.58-4.58a1 1 0 0 0-1.41-1.41l-5.3 5.3a1 1 0 0 0 0 1.41l5.3 5.3a1 1 0 0 0 1.41 0 1 1 0 0 0 0-1.42z" />
+                        </svg>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+</section>

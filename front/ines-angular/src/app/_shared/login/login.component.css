@@ -1,0 +1,21 @@
+.arabe{
+    text-align: right;
+}
+
+.input-with-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .password-input {
+    padding-right: 40px;
+  }
+  
+  .input-icon {
+    position: absolute;
+    top: 48%;
+    right: 80px;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }

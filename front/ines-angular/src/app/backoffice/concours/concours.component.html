@@ -1,0 +1,115 @@
+<div class="">
+
+    <form #f="ngForm">
+        <div class="flex flex-wrap -mx-3 mb-12">
+            <div class="w-full md:w-1/4 px-3 mb-2 md:mb-0">
+                <label [ngClass]="{'arab' : myData == 'ar'}"
+                    class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="first-name">
+                    {{"concours.c1" | translate}}
+                </label>
+                <input
+                    class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                    required id="first-name" type="text" [(ngModel)]="concours.name" name="firstname">
+            </div>
+            <div class="w-full md:w-1/4 px-3 mb-2 md:mb-0">
+                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="first-name">
+                    {{"concours.c2" | translate}}
+                </label>
+                <div class="form-check">
+                    <input class="form-check-input" [(ngModel)]="concours.certif" name="one" type="radio" value='{{"concours.c3" | translate}}' id="flexCheckDefault">
+                    <label [ngClass]="{'arab' : myData == 'ar'}" class="form-check-label" for="flexCheckDefault">
+                        {{"concours.c3" | translate}}
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" [(ngModel)]="concours.certif" name="two" type="radio" value='{{"concours.c4" | translate}}' id="flexCheckChecked">
+                    <label [ngClass]="{'arab' : myData == 'ar'}" class="form-check-label" for="flexCheckChecked">
+                        {{"concours.c4" | translate}}
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" [(ngModel)]="concours.certif" name="three" type="radio" value='{{"concours.c5" | translate}}' id="flexCheckChecked">
+                    <label [ngClass]="{'arab' : myData == 'ar'}" class="form-check-label" for="flexCheckChecked">
+                        {{"concours.c5" | translate}}
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="four" [(ngModel)]="concours.certif" value='{{"concours.c6" | translate}}' id="flexCheckChecked">
+                    <label [ngClass]="{'arab' : myData == 'ar'}" class="form-check-label" for="flexCheckChecked">
+                        {{"concours.c6" | translate}}
+                    </label>
+                </div>
+            </div>
+            <div class="w-full md:w-1/4 px-3 mb-2 md:mb-0">
+          
+                <div>
+                    <div>
+                        <label [ngClass]="{'arab' : myData == 'ar'}"
+                            class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="first-name">
+                            {{"concours.c7" | translate}}
+                        </label>
+                        <input
+                            class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                            required id="first-name" [(ngModel)]="concours.dateExam" type="date" name="dateExam">
+                    </div>
+                    <div>
+                        <label [ngClass]="{'arab' : myData == 'ar'}"
+                            class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="first-name">
+                            {{"concours.c8" | translate}}
+                        </label>
+                        <input
+                            class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                            required id="first-name" [(ngModel)]="concours.dateConcours" type="date" name="dateConcours">
+                    </div>
+                    <div>
+                        <label [ngClass]="{'arab' : myData == 'ar'}"
+                            class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="first-name">
+                            {{"concours.c9" | translate}}
+                        </label>
+                        <input
+                            class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                            required id="first-name" type="date" [(ngModel)]="concours.result" name="result">
+                    </div>
+                </div>
+            </div>
+            <div class="w-full md:w-1/4 px-3 mb-2 md:mb-0">
+                <label [ngClass]="{'arab' : myData == 'ar'}"
+                    class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="first-name">
+                    {{"concours.c10" | translate}}
+                </label>
+                <input
+                    class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                    required id="first-name" [(ngModel)]="concours.img" type="file" name="img">
+            </div>
+        </div>
+        <div >
+            <label [ngClass]="{'arab' : myData == 'ar'}"
+                class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="first-name">
+                {{"concours.c11" | translate}}
+            </label>
+            <textarea
+                class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                required id="first-name" [(ngModel)]="concours.description" type="text" name="description"></textarea>
+        </div>
+        <div >
+            <label [ngClass]="{'arab' : myData == 'ar'}"
+                class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="first-name">
+                {{"concours.c12" | translate}}
+            </label>
+            <input
+                class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                required id="first-name" [(ngModel)]="concours.scoor" type="text" name="scoor">
+        </div>
+
+        <div style="display: flex; " [ngClass]="{'arab-btn' : myData == 'ar'}" >
+            <button class="btn btn-primary" style="margin: 5px;" (click)="add()">{{"concours.c13" | translate}}</button>
+            <button class="btn btn-primary " style="margin: 5px;">{{"concours.c14" | translate}}</button>
+        </div>
+
+
+    </form>
+</div>
+
+<!-- <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col my-2">
+  
+  </div> -->

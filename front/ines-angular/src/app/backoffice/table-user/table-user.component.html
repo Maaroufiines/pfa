@@ -1,0 +1,21 @@
+<h2>Liste Condidat by Concours {{consours.name}}</h2>
+
+<table class="table">
+    <thead class="table-dark">
+        <tr>
+            <th>
+                first name
+            </th>
+            <th>
+                last name
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let i of consours.enrolledUsers">
+            <td> {{i.firstName}}</td>
+            <td>{{i.lastName}}</td>
+
+        </tr>
+    </tbody>
+</table>
